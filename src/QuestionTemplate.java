@@ -4,6 +4,9 @@ import timecheck.ProcessTimeCheck;
  * PAGE:
  * 주제:
  * 문제:
+ *
+ * input:
+ * output:
  */
 public class QuestionTemplate {
     private static void solution(String str){
