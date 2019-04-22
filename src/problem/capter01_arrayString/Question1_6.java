@@ -16,6 +16,7 @@ public class Question1_6 {
         for (int i = 0; i < str.length(); i++) {
             count++;
 
+            // str.charAt(i + 1) --> Method threw 'java.lang.StringIndexOutOfBoundsException' exception.
             if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
                 builder.append(str.charAt(i));
                 builder.append(count);
@@ -32,7 +33,8 @@ public class Question1_6 {
 
     public static void main(String[] args) {
         ProcessTimeCheck processTimeCheck = new ProcessTimeCheck();
-        System.out.println(solution("aabccccaaa"));
+//        System.out.println(solution("aabccccaaa"));
+        System.out.println(solution("aa"));
         processTimeCheck.processReport();
     }
 }
