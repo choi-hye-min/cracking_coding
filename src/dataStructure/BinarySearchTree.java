@@ -19,7 +19,7 @@ public class BinarySearchTree {
         TreeNode p = root;
         TreeNode newNode = new TreeNode(x);
 
-        if (p == null) {
+        if (p ==null || p.getData() == 0) {
             return newNode;
         }
 
