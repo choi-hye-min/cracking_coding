@@ -30,7 +30,7 @@ public class Question4_5 {
     private static void solution(BinarySearchTree tree) {
         TreeNode root = tree.getRoot();
 
-        System.out.println("BST : " + checkBST(root, 2, 16));
+        System.out.println("BST : " + checkBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE));
     }
 
     private static boolean checkBST(TreeNode node, int min, int max) {
@@ -45,8 +45,8 @@ public class Question4_5 {
         }
 
         // 왼쪽노드,오른쪽노드 최소값과 최대값을 현재의 노드의 값으로 변경하며 재귀한다.
-        if (!checkBST(node.getLeft(), min, node.getData())
-                || !checkBST(node.getRight(), node.getData(), max)) {
+        if (!checkBST(node.getLeft(), min, node.getData()-1)
+                || !checkBST(node.getRight(), node.getData()+1, max)) {
             return false;
         }
 
